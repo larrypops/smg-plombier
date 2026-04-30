@@ -158,11 +158,13 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
               >
-                <div className={`w-14 h-14 ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <service.icon className="w-7 h-7" />
+                <div className="mb-6 flex items-center gap-4 text-left">
+                  <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.color} transition-transform group-hover:scale-110`}>
+                    <service.icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="font-display text-xl font-black leading-tight text-brand-dark">{service.title}</h3>
                 </div>
-                <h3 className="text-xl font-display font-black text-brand-dark mb-6">{service.title}</h3>
-                <ul className="space-y-3 text-slate-600 text-sm font-medium">
+                <ul className="space-y-3 text-left text-sm font-medium text-slate-600">
                   {service.items.map((item) => (
                     <li key={item} className="flex items-center space-x-2">
                        <div className="w-1.5 h-1.5 bg-slate-300 rounded-full" />
